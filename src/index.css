@@ -1,0 +1,387 @@
+Reset & base styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e1a32;
+  color: white;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #152447;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #56ccf2;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar nav a:hover {
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info span {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.user-info button {
+  padding: 6px 12px;
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-info button:hover {
+  background-color: #e84141;
+}
+
+/* Dashboard cards section */
+.dashboard {
+  padding: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: #1c2f4a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  color: #56ccf2;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.card small {
+  font-size: 0.85rem;
+  color: #bbbbbb;
+}
+
+.tag {
+  margin-top: 5px;
+  display: inline-block;
+  background-color: #29cc7a;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  color: white;
+}
+
+/* Route planner & map section */
+.route-map {
+  display: flex;
+  gap: 30px;
+}
+
+.route {
+  flex: 1;
+  background: #1c2f4a;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.route h3 {
+  margin-bottom: 15px;
+  color: #56ccf2;
+}
+
+.route label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.route input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a3f5f;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.route input::placeholder {
+  color: #ccc;
+}
+
+.route-btn {
+  margin-top: 10px;
+  background-color: #267eff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.route-btn:hover {
+  background-color: #1c65d1;
+}
+
+/* Map box styling */
+.map {
+  flex: 1;
+  background: #1c2f4a;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.map h4 {
+  color: #56ccf2;
+  margin-bottom: 10px;
+}
+
+.map p {
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.map-box {
+  height: 200px;
+  background-color: #283d63;
+  border-radius: 10px;
+}
+
+/* === main page evs  === */
+/* === Improved EV Station List on Main Page === */
+.ev-stations {
+  margin-top: 2rem;
+  background-color: #0f172a; /* match main page background */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  color: #f0f0f0;
+}
+
+.ev-stations h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #38bdf8; /* light blue like main text */
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 0.5rem;
+}
+
+.ev-stations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ev-stations li {
+  background-color: #1e293b; /* darker shade for list */
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e2e8f0;
+}
+
+.ev-stations li strong {
+  color: #60a5fa; /* brighter blue */
+}
+
+.ev-stations li span {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* Ensure it's placed under map and form visually */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.map-route-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.map-box, .form-box {
+  flex: 1 1 500px;
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+
+
+
+/* === AddNewStation Form === */
+.form-station {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-station h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Form input groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+input,
+select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* Submit button */
+.form-group button {
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-group button:hover {
+  background-color: #005fa3;
+}
+
+/* === Station List on /addnewstation === */
+.station-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 2rem auto 0;
+}
+
+.station-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f8fc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Station text visibility */
+.station-item div {
+  color: #1a1a1a;
+  font-size: 1rem;
+}
+
+.station-item div strong {
+  display: inline-block;
+  margin-right: 8px;
+  color: #0077cc;
+}
+
+.station-item div::after {
+  content: '';
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  background-color: #ddd;
+  width: 100%;
+}
+
+/* Edit/Delete buttons */
+.station-actions button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.station-actions button:first-child {
+  background-color: #0077cc;
+  color: white;
+}
+
+.station-actions .delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.station-actions .delete-btn:hover {
+  background-color: #c0392b;
+}
